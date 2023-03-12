@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    background-color: #2c3531;
+    background-color: #d7eaf3;
 }
 
 img {
@@ -9,20 +9,19 @@ img {
 }
 
 .bayan {
-    max-width: 500px;
+    max-width: 90%;
     margin: 5px auto;
 }
 
 .bayan-item {
-    cursor: pointer;
-    border: 1px solid #ffcb9a;
+    border-top: 1px solid #14397d;
 }
 
 .bayan-title {
     display: block;
     padding: 10px 15px;
-    position: relative;
-    color: #fff;
+    color: #14397d;
+    font-weight: bold;
     cursor: pointer;
     transition: background .2s ease-out;
 }
@@ -30,15 +29,14 @@ img {
 .bayan-title:after {
     display: block;
     border-style: solid;
-    border-width: 8px 5px 0 5px;
-    border-color: #ffcb9a transparent transparent transparent;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
 }
 
 .bayan-title:hover {
-    background-color: #ffcb9a;
+    background-color: #77b5d9;
+}
+
+.bayan-title:active {
+    background-color: #ffffff;
 }
 
 .bayan-input {
@@ -50,7 +48,7 @@ img {
 }
 
 .bayan-input:checked ~ .bayan-title {
-    background-color: #ffcb9a;
+    background-color: #d7eaf3;
 }
 
 .bayan-input:checked ~ .bayan-title:after {
@@ -74,9 +72,28 @@ img {
     overflow:hidden
 }
 
+.bayan-input:checked ~ label svg {
+    transform: rotate(90deg);
+    opacity: 100;
+}
+
+.meme-title {
+    display: inline-block;
+}
+
+svg {
+    transition: all 0.3s ease;
+    padding-left: 5px;
+    float: left;
+}
+
+.svg-title {
+    float: right;
+}
+
 @media (min-width: 800px) {
     .bayan {
-        max-width: 80%;
+        max-width: 85%;
         margin: 10px auto;
     }
 }
