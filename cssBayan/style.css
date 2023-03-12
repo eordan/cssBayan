@@ -1,49 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1.5em;
     background-color: #d7eaf3;
 }
 
 img {
-    max-width: 30%;
+    max-width: 70%;
+    border-radius: 1em;
+    margin: 0.1em;
+}
+
+svg {
+    transition: all 0.5s ease;
+    float: left;
 }
 
 .bayan {
     max-width: 90%;
-    margin: 5px auto;
+    margin: 0.1em auto;
 }
 
 .bayan-item {
-    border-top: 1px solid #14397d;
+    border-top: 0.1em solid #14397d;
 }
 
 .bayan-title {
     display: block;
     padding: 10px 15px;
-    color: #14397d;
     font-weight: bold;
     cursor: pointer;
-    transition: background .2s ease-out;
-}
-
-.bayan-title:after {
-    display: block;
-    border-style: solid;
-}
-
-.bayan-title:hover {
-    background-color: #77b5d9;
-}
-
-.bayan-title:active {
-    background-color: #ffffff;
 }
 
 .bayan-input {
-    width: 0;
-    height: 0;
-    -webkit-appearance: none;
-    appearance: none;
     display: none;
 }
 
@@ -51,22 +39,12 @@ img {
     background-color: #d7eaf3;
 }
 
-.bayan-input:checked ~ .bayan-title:after {
-    border-style: solid;
-    border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #ffcb9a transparent;
-}
-
 .bayan-input:checked ~ .bayan-img {
     max-height: 50em;
 }
 
-.bayan-input:hover ~ .bayan-img {
-    max-height: 50em;
-}
-
 .bayan-img {
-    max-height: 0;
+    max-height: 0em;
     text-align: center;
     transition: max-height 1s ease;
     overflow:hidden
@@ -81,26 +59,50 @@ img {
     display: inline-block;
 }
 
-svg {
-    transition: all 0.3s ease;
-    padding-left: 5px;
-    float: left;
-}
-
 .svg-title {
     float: right;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .bayan-input:hover ~ .bayan-img {
+        max-height: 50em;
+    }
+
+    .bayan-title:hover {
+        background-color: #77b5d9;
+    }
+}
+
+.bayan-title:active {
+    background-color: #ffffff;
 }
 
 @media (min-width: 800px) {
     .bayan {
         max-width: 85%;
-        margin: 10px auto;
+        margin: 0.3em auto;
+    }
+
+    body {
+        font-size: 1.4em;
+    }
+
+    img {
+        max-width: 50%;
     }
 }
 
 @media (min-width: 1200px) {
     .bayan {
         max-width: 70%;
-        margin: 20px auto;
+        margin: 0.5em auto;
+    }
+
+    body {
+        font-size: 1.2em;
+    }
+
+    img {
+        max-width: 25%;
     }
 }
