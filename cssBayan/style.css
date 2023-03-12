@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    background-color: #d7eaf3;
+}
+
+img {
+    max-width: 70%;
+    border-radius: 1em;
+    margin: 0.1em;
+}
+
+svg {
+    transition: all 0.5s ease;
+    float: left;
+}
+
+.bayan {
+    max-width: 90%;
+    margin: 0.1em auto;
+}
+
+.bayan-item {
+    border-top: 0.1em solid #14397d;
+}
+
+.bayan-title {
+    display: block;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bayan-input {
+    display: none;
+}
+
+.bayan-input:checked ~ .bayan-title {
+    background-color: #d7eaf3;
+}
+
+.bayan-input:checked ~ .bayan-img {
+    max-height: 50em;
+}
+
+.bayan-img {
+    max-height: 0em;
+    text-align: center;
+    transition: max-height 1s ease;
+    overflow:hidden
+}
+
+.bayan-input:checked ~ label svg {
+    transform: rotate(90deg);
+    opacity: 100;
+}
+
+.meme-title {
+    display: inline-block;
+}
+
+.svg-title {
+    float: right;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .bayan-input:hover ~ .bayan-img {
+        max-height: 50em;
+    }
+
+    .bayan-title:hover {
+        background-color: #77b5d9;
+    }
+}
+
+.bayan-title:active {
+    background-color: #ffffff;
+}
+
+@media (min-width: 800px) {
+    .bayan {
+        max-width: 85%;
+        margin: 0.3em auto;
+    }
+
+    body {
+        font-size: 1.4em;
+    }
+
+    img {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bayan {
+        max-width: 70%;
+        margin: 0.5em auto;
+    }
+
+    body {
+        font-size: 1.2em;
+    }
+
+    img {
+        max-width: 25%;
+    }
+}
