@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #2c3531;
+}
+
+img {
+    max-width: 30%;
+}
+
+.bayan {
+    max-width: 500px;
+    margin: 5px auto;
+}
+
+.bayan-item {
+    cursor: pointer;
+    border: 1px solid #ffcb9a;
+}
+
+.bayan-title {
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-out;
+}
+
+.bayan-title:after {
+    display: block;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #ffcb9a transparent transparent transparent;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.bayan-title:hover {
+    background-color: #ffcb9a;
+}
+
+.bayan-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.bayan-input:checked ~ .bayan-title {
+    background-color: #ffcb9a;
+}
+
+.bayan-input:checked ~ .bayan-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #ffcb9a transparent;
+}
+
+.bayan-input:checked ~ .bayan-img {
+    max-height: 50em;
+}
+
+.bayan-input:hover ~ .bayan-img {
+    max-height: 50em;
+}
+
+.bayan-img {
+    max-height: 0;
+    text-align: center;
+    transition: max-height 1s ease;
+    overflow:hidden
+}
+
+@media (min-width: 800px) {
+    .bayan {
+        max-width: 80%;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bayan {
+        max-width: 70%;
+        margin: 20px auto;
+    }
+}
